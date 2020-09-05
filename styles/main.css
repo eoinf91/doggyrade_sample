@@ -1,0 +1,1254 @@
+/**
+    *   Variable Colours
+*/
+:root {
+    --white: #ffffff;
+    --grey: #ededed;
+    --black: #000000;
+    --orange: #F8941B;
+    --pink: #D227B9;
+    --purple: #7F3483;
+    --regBlue: #006CB6;
+    --lightBlue: #00AEEF;
+    --deepBlue: #1C4897;
+}
+
+/**
+    *   Font Family
+*/
+@font-face{
+    font-family: 'Helvetica Neue';
+    src: url('../assets/fonts/helveticaneue.ttf') format(ttf);
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a.cta{
+    display: inline-block;
+    padding: 5px 12px;
+    margin: 10px 0px;
+    transition: all 1s ease;
+    border-radius: 5px;
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+a.cta.white{
+    background: var(--white);
+    color: var(--deepBlue);
+}
+
+a.cta.white:hover{
+    background: var(--deepBlue);
+    color: var(--white);
+}
+
+a.cta.white-pink{
+    color: var(--pink);
+    background: var(--white);
+}
+
+a.cta.white-pink:hover{
+    color: var(--white);
+    background: var(--pink);
+}
+
+a.cta.blue-white{
+    color: var(--white);
+    background: var(--deepBlue);
+}
+
+a.cta.blue-white:hover{
+    color: var(--white);
+    background: var(--orange);
+}
+
+a.cta.pink-white{
+    color: var(--white);
+    background: var(--pink);
+}
+
+a.cta.pink-white:hover{
+    color: var(--pink);
+    background: var(--white);
+}
+
+a.cta.purple-white{
+    color: var(--white);
+    background: var(--purple);
+}
+
+a.cta.purple-white:hover{
+    color: var(--purple);
+    background: var(--white);
+}
+
+img{
+    max-width: 100%;
+}
+
+h2{
+    font-family: "HelveticaNeueLTPro-BdCn", sans-serif;
+    color: var(--black);
+    font-size: 18px;
+    line-height: 1.4em;
+    font-weight: 500;
+    margin: 0px;
+}
+
+h3{
+    font-family: "HelveticaNeueLTPro-BdCn", sans-serif;
+    color: var(--black);
+    font-size: 16px;
+    line-height: 1.4em;
+    font-weight: 500;
+    margin: 0px;
+}
+
+p, li{
+    font-family: "Helvetica Neue", sans-serif;
+    color: var(--black);
+    font-size: 14px;
+    line-height: 1.4em;
+    font-weight: 400;
+    margin: 0px;
+}
+
+header{
+    padding: 10px 20px;
+    background: url('../assets/images/Front-Page-Banner.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 10000;
+    width: 100vw;
+}
+
+header a img{
+    display: block;
+    width: 200px;
+    margin: 10px 0px;
+}
+
+header nav .hamburger span{
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    
+    background: #cdcdcd;
+    border-radius: 3px;
+    
+    z-index: 1;
+    
+    transform-origin: 4px 0px;
+    
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                opacity 0.55s ease;
+}
+
+header nav .hamburger span:first-child{
+    transform-origin: 0% 0%;
+}
+
+header nav .hamburger span:nth-last-child(2){
+    transform-origin: 0% 100%;
+}
+
+header nav .hamburger.open span{
+    opacity: 1;
+    transform: rotate(45deg) translate(-14px, -1px);
+}
+
+header nav .hamburger.open span:nth-last-child(3){
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+header nav .hamburger.open span:nth-last-child(2){
+    transform: rotate(135deg) translate(-14px, -1px)
+}
+
+header nav .navigation{
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    left: 0px;
+    background: rgba(0,0,0,0.9);
+    top: 0;
+    z-index: -1;
+    padding: 150px 20px 20px;
+    text-align: center;
+}
+
+header nav .navigation a{
+    display: block;
+    margin: 30px auto;
+    font-family: HelveticaNeueLTPro-BdCn, sans-serif;
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 1s;
+}
+
+header nav .navigation a:hover{
+    color: var(--lightBlue);
+}
+
+.typewrite{
+    padding: 100px 10px 20px;
+    font-family: "HelveticaNeueLTPro-BdCn", sans-serif;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 18px;
+}
+
+#video-carousel .carousel-cell {
+    width: 100%;
+    height: 350px;
+}
+
+#video-carousel .carousel-cell .video {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#video-carousel .carousel-cell .video img {
+    position: absolute;
+    width: 220px;
+    display: block;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 20px;
+    z-index: 100;
+}
+
+#video-carousel .carousel-cell .video video {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 350px;
+}
+
+.subhead{
+    padding: 20px;
+    text-align: center;
+}
+
+.animal_btns_quicklinks{
+    background: url('../assets/images/products_bg.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+}
+
+.animal_btns_quicklinks .animal_btn{
+    width: 100%;
+    height: 150px;
+    margin: 10px 0px;
+    position: relative;
+}
+
+.animal_btns_quicklinks .animal_btn.dogs{
+    background: url('../assets/images/dogs_btn_bg.jpg');
+    background-size: cover;
+    background-position: left center;
+}
+
+.animal_btns_quicklinks .animal_btn.cats{
+    background: url('../assets/images/cats_btn_bg.jpg');
+    background-size: cover;
+    background-position: left center;
+}
+
+.animal_btns_quicklinks .animal_btn .animal_btn_content{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.animal_btns_quicklinks .animal_btn .animal_btn_content h2{
+    color: var(--white);
+    font-size: 30px;
+    text-shadow: 0px 0px 5px var(--black);
+}
+
+#products-carousel .carousel-cell{
+    width: 100%;
+    padding: 20px;
+    height: 400px;
+    position: relative;
+}
+
+#products-carousel .carousel-cell.doggyrade{
+    background: 
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+        url("../assets/images/carousel_doggyrade_bg.jpg");
+    background-size: cover;
+    background-position: 60% center;
+}
+
+#products-carousel .carousel-cell.kittyrade{
+    background: 
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+        url("../assets/images/carousel_kittyrade_bg.jpg");
+    background-size: cover;
+    background-position: 10% center;
+}
+
+#products-carousel .carousel-cell.yummyrade{
+    background: 
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+        url("../assets/images/carousel_yummyrade_bg.jpg");
+    background-size: cover;
+    background-position: 75% center;
+}
+
+#products-carousel .carousel-cell.doggyradepro{
+    background: 
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+        url("../assets/images/carousel_doggyradepro_bg.jpg");
+    background-size: cover;
+    background-position: 10% center;
+}
+
+#products-carousel .carousel-cell .content{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    width: 90%;
+    padding: 20px;
+    text-align: center;
+}
+
+#products-carousel .carousel-cell .content img{
+    display: block;
+    height: 150px;
+    margin: auto;
+}
+
+#products-carousel .carousel-cell .content h2{
+    color: var(--white);
+    background: var(--orange);
+    display: inline-block;
+    margin: 1px auto;
+    padding: 5px 10px;
+    font-family: "Helvetica Neue", sans-serif;
+}
+
+#products-carousel .carousel-cell.kittyrade .content h2{
+    color: var(--white);
+    background: var(--pink);
+}
+
+#products-carousel .carousel-cell.doggyradepro .content h2{
+    color: var(--white);
+    background: var(--lightBlue);
+}
+
+.home_videos{
+    background: var(--orange);
+    padding: 10px;
+    display: flex; 
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.home_videos .home_video{
+    width: calc(100% / 2 - 10px);
+    margin: 0px 0px 25px;
+}
+
+.home_videos .home_video img{
+    margin-bottom: 10px;
+}
+
+.faq_dropdown_container .faq_dropdown_content .faq_dropdown_q{
+    background: url('../assets/images/products_bg.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 10px 20px;
+}
+
+.faq_dropdown_container .faq_dropdown_content:first-of-type{
+    margin-bottom: 5px;
+}
+
+.faq_dropdown_container .faq_dropdown_content .faq_dropdown_q h3{
+    color: var(--white);
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+}
+
+.faq_dropdown_container .faq_dropdown_content .faq_dropdown_q h3:after{
+    position: absolute;
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid var(--white);
+    border-top: 2px solid var(--white);
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    right: -30px;
+    transition: all 0.75s;
+}
+
+.faq_dropdown_container .faq_dropdown_content .faq_dropdown_q.open h3:after{
+    transform: translateY(-50%) rotate(135deg) translateX(-5px);
+}
+
+.faq_dropdown_container .faq_dropdown_content .faq_dropdown_a{
+    display: none;
+}
+
+.faq_dropdown_container .faq_dropdown_content .faq_dropdown_a .col.content{
+    padding: 10px 20px;
+}
+
+footer{
+    border-top: 5px solid var(--lightBlue);
+    background: url('../assets/images/Front-Page-Banner.jpg');
+    background-size: cover;
+    background-position: 40% bottom;
+    padding: 20px;
+    text-align: center;
+}
+
+footer .social_icons{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+}
+
+footer .social_icons a img{
+    width: 30px;
+}
+
+footer .legals p{
+    color: var(--white);
+    font-weight: 600;
+    font-size: 10px;
+    margin: 10px auto;
+}
+
+.about-page{
+    padding: 100px 0px;
+}
+
+.about-page .about-cols{
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.about-page .with-bg{
+    background: url('../assets/images/about_dark_bg.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+}
+
+.about-page .about-cols .image{
+    height: 200px;
+    overflow: hidden;
+    background: var(--white);
+}
+
+.about-page .about-cols .image img{
+    width: 100%;
+    display: block;
+    margin: 0px auto;
+    margin-top: 80px;
+}
+
+.about-page .about-cols .about-col h2{
+    text-transform: uppercase;
+    margin: 15px auto;
+}
+
+.about-page .with-bg h2{
+    color: var(--white);
+    text-transform: uppercase;
+    margin: 15px auto;
+}
+
+.about-page .about-cols .about-col p{
+    line-height: 1.6em;
+    margin: 15px auto;
+}
+
+.about-page .with-bg p{
+    color: var(--white);
+}
+
+.about-pets{
+    margin: 20px auto;
+}
+
+.about-dehydration{
+    padding: 20px;
+    margin: 20px auto;
+}
+
+.about-dehydration h2{
+    text-transform: uppercase;
+    margin: 15px auto;
+}
+
+.about-dehydration .four-col{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-dehydration .four-col .col{
+    width: calc(100% / 2 - 10px);
+    height: 200px;
+    background: var(--orange);
+    padding: 20px 10px;
+    margin: 10px 0px;
+    border-radius: 25px;
+}
+
+.about-dehydration .four-col .col.doggyrade{
+    background: url('../assets/images/DR-BACKGROUND-300X-420.jpg');
+    background-size: cover;
+}
+
+.about-dehydration .four-col .col.kittyrade{
+    background: url('../assets/images/KR-BACKGROUND-300X-420.jpg');
+    background-size: cover;
+}
+
+.about-dehydration .four-col .col.doggyradepro{
+    background: url('../assets/images/DRP-BACKGROUND-300X-420.jpg');
+    background-size: cover;
+}
+
+.about-dehydration .four-col .col.yummyrade{
+    background: url('../assets/images/YR-BACKGROUND-300X-420.jpg');
+    background-size: cover;
+}
+
+.about-dehydration .four-col .col img{
+    display: block;
+    height: 100%;
+    margin: auto;
+}
+
+.product-page .product-header{
+    width: 100%;
+    height: 350px;
+}
+
+.product-page .product-header .video{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.product-page .product-header .video img{
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    width: 220px;
+}
+
+.product-page .product-header .video video{
+    position: absolute;
+    min-height: 100%;
+    min-width: 100%;
+    width: 100%;
+    object-fit: cover;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.product-page .two-col .image{
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+}
+
+.product-page .two-col .image img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -30px;
+}
+
+.product-page .two-col .content{
+    background: url('../assets/images/about_dark_bg.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+}
+
+.product-page .two-col .content .copy p{
+    color: var(--white);
+    margin: 10px 0px;
+}
+
+.product-page .product-logo{
+    border-top: 8px solid var(--lightBlue);
+    padding: 20px;
+    background: url('../assets/images/products_bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.product-page.kittyrade .product-logo{
+    border-top: 8px solid var(--pink);
+}
+
+.product-page.yummyrade .product-logo{
+    border-top: 8px solid var(--purple);
+}
+
+.product-page .product-logo img{
+    width: 60%;
+    margin: auto;
+    display: block;
+}
+
+.product-page .product-two-col{
+    padding: 20px;
+}
+
+.product-page .product-two-col .col p{
+    margin: 20px auto;
+    line-height: 1.6em;
+}
+
+.product-page .benefits{
+    background: var(--grey);
+    border-top: 8px solid var(--lightBlue);
+    padding: 20px;
+}
+
+.product-page.kittyrade .benefits{
+    border-top: 8px solid var(--pink);   
+}
+
+.product-page.yummyrade .benefits{
+    border-top: 8px solid var(--purple);   
+}
+
+.product-page .benefits h2{
+    text-transform: uppercase;
+}
+
+.product-page .benefits .two-col .col{
+    padding: 20px;
+}
+
+.product-page .benefits .two-col .col .copy{
+    padding: 10px 20px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.8);
+}
+
+.product-page .benefits .two-col .col p{
+    margin: 20px 0px;
+    font-weight: 500;
+    font-size: 1.1em;
+}
+
+.product-page .benefits .two-col .col li{
+    margin: 10px 20px;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+.product-page .home_videos_heading{
+    background: url('../assets/images/products_bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 10px 20px;
+}
+
+.product-page .home_videos_heading h2{
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1em;
+}
+
+.product-page .other-products{
+    padding: 20px;
+    background: url('../assets/images/about_dark_bg.jpg');
+    background-size: cover;
+}
+
+.product-page .other-products h2{
+    color: var(--white);
+    text-transform: uppercase;
+}
+
+.product-page .other-products .other-products-cols{
+    padding: 20px;
+}
+
+.product-page .other-products .other-products-cols .other-products-col{
+    background: var(--white);
+    border-radius: 20px;
+    margin: 10px 0px;
+    padding: 20px;
+    text-align: center;
+}
+
+.product-page .other-products .other-products-cols .other-products-col.yummyrade{
+    background: url('../assets/images/YR-BACKGROUND-300X-420.jpg');
+    background-size: cover;
+}
+
+.product-page .other-products .other-products-cols .other-products-col.doggyradepro{
+    background: url('../assets/images/DRP-BACKGROUND-300X-420.jpg');
+    background-size: cover;
+}
+
+.product-page .other-products .other-products-cols .other-products-col.doggyrade{
+    background: url('../assets/images/DR-BACKGROUND-300X-420.jpg');
+    background-size: cover;
+}
+
+.product-page .other-products .other-products-cols .other-products-col.kittyrade{
+    background: url('../assets/images/KR-BACKGROUND-300X-420.jpg');
+    background-size: cover;
+}
+
+.product-page .other-products .other-products-cols .other-products-col img{
+    display: block;
+    height: 150px;
+    margin: 0px auto 20px;
+}
+
+.product-page .other-products .other-products-cols .other-products-col p{
+    font-weight: 500;
+}
+
+
+.contact .contact-cols .contact-col.with-bg{
+    background: url('../assets/images/about_dark_bg.jpg');
+    background-size: cover;
+    padding: 140px 20px 20px;
+}
+
+.contact .contact-cols .contact-col.img{
+    background: url("../assets/images/contact_dog_image.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 350px;
+}
+
+.contact .contact-cols .contact-col h1{
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0px 0px 30px;
+    font-family: "HelveticaNeueLTPro-BdCn", sans-serif;
+    font-size: 32px;
+}
+
+.contact .contact-cols .contact-col p,
+.contact .contact-cols .contact-col p a{
+    color: var(--white);
+    margin: 30px 0px;
+}
+
+.contact .contact-cols .contact-col .social-icons a{
+    display: inline-block;
+    border: 3px solid var(--white);
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    overflow: hidden;
+    position: relative;
+    margin: 30px 10px 30px 0px;
+    transition: all 1s;
+}
+
+.contact .contact-cols .contact-col .social-icons a img,
+.contact .contact-cols .contact-col .social-icons a svg{
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    height: 25px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.contact .contact-cols .contact-col .social-icons a svg .st0{
+    fill: var(--white);
+    transition: all 1s;
+}
+
+.contact .contact-cols .contact-col .social-icons a:hover{
+    border: 3px solid var(--lightBlue);
+}
+
+.contact .contact-cols .contact-col .social-icons a:hover svg .st0{
+    fill: var(--lightBlue);
+}
+
+@media only screen and (min-width: 768px){
+
+    #video-carousel .carousel-cell {
+        width: 100%;
+        height: 450px;
+        overflow: hidden;
+    }
+    #video-carousel .carousel-cell .video {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    #video-carousel .carousel-cell .video img {
+        position: absolute;
+        width: 320px;
+        display: block;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 20px;
+        z-index: 100;
+    }
+    #video-carousel .carousel-cell .video video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        min-width: 100%;
+        height: auto;
+    }
+
+    .animal_btns_quicklinks{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .animal_btns_quicklinks .animal_btn{
+        width: calc(100% / 2 - 10px);
+        height: 170px;
+    }
+
+    #products-carousel .carousel-cell{
+        height: 230px;
+    }
+
+    #products-carousel .carousel-cell.doggyrade{
+        background: 
+            url("../assets/images/carousel_doggyrade_bg.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+    
+    #products-carousel .carousel-cell.kittyrade{
+        background: 
+            url("../assets/images/carousel_kittyrade_bg.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+    
+    #products-carousel .carousel-cell.yummyrade{
+        background: 
+            url("../assets/images/carousel_yummyrade_bg.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+    
+    #products-carousel .carousel-cell.doggyradepro{
+        background: 
+            url("../assets/images/carousel_doggyradepro_bg.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+
+    #products-carousel .carousel-cell .content img{
+        height: auto;
+        width: 100px;
+        margin: 0px 10px;
+    }
+
+    #products-carousel .carousel-cell .content{
+        text-align: left;
+        display: flex;
+        align-items: center;
+        width: 450px;
+        transform: translateY(-50%);
+        left: 30px;
+    }
+
+    #products-carousel .carousel-cell.kittyrade .content,
+    #products-carousel .carousel-cell.doggyradepro .content{
+        left: auto;
+        right: 30px;
+    }
+    
+    .faq_dropdown_container .faq_dropdown_content .faq_dropdown_a .container{
+        display: flex;
+        padding: 20px;
+        align-items: center;
+    }
+
+    .faq_dropdown_container .faq_dropdown_content .faq_dropdown_a .col{
+        width: calc(100% / 2 - 10px);
+    }
+
+    .faq_dropdown_container .faq_dropdown_content .faq_dropdown_a .container .col p{
+        line-height: 2em;
+        margin-bottom: 15px;
+    }
+
+    .home_videos .home_video{
+        width: calc(100% / 5 - 10px);
+    }
+
+    footer .social_icons{
+        width: 300px;
+    }
+
+    .about-page{
+        padding: 120px 0px 20px;
+    }
+
+    .about-page .about-cols{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0px;
+        padding: 0px 20px;
+    }
+
+    .about-page .about-cols .image{
+        width: calc(100% / 2 - 10px);
+        height: auto;
+        position: relative;
+    }
+
+    .about-page .about-cols .image img{
+        position: relative;
+        bottom: -80px;
+        margin: auto;
+    }
+
+    .about-page .about-cols .about-col{
+        width: calc(100% / 2 - 10px);
+        padding: 30px;
+    }
+
+    .about-page .about-pets{
+        padding: 30px;
+        margin: 0px;
+    }
+
+    .about-page .about-dehydration{
+        margin: 0px;
+    }
+
+    .about-page .about-dehydration .four-col{
+        margin: 30px 0px;
+    }
+
+    .about-page .about-dehydration .four-col .col{
+        width: calc(100% / 4 - 20px);
+    }
+
+    .product-page .two-col{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .product-page .two-col .col{
+        width: 50%;
+    }
+
+    .product-page .two-col .image img{
+        width: calc(100% + 90px);
+        height: calc(100% + 90px);
+        top: -60px;
+    }
+
+    .product-page .product-logo img{
+        width: 200px;
+        margin: 0px;
+    }
+
+    .product-page .product-two-col{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .product-page .product-two-col .col{
+        width: calc(100% / 2 - 10px);
+    }
+
+    .product-page .other-products .other-products-cols{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .product-page .other-products .other-products-cols .other-products-col{
+        width: calc(100% / 2 - 10px);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-align: left;
+    }
+
+    .product-page .other-products .other-products-cols .other-products-col .copy{
+        width: 65%;
+    }
+
+    .product-page .other-products .other-products-cols .other-products-col .copy p{
+        text-align: left;
+    }
+
+    .contact .contact-cols .contact-col.with-bg{
+        padding: 150px 100px 100px;
+    }
+
+    .contact .contact-cols .contact-col.img{
+        background-position: center;
+        height: 450px;
+    }
+}
+
+@media only screen and (min-width: 1366px){
+
+    a.cta{
+        font-size: 18px;
+        padding: 7px 15px;
+    }
+    
+    h2{
+        font-size: 26px;
+    }
+
+    h3{
+        font-size: 22px;
+    }
+
+    p{
+        font-size: 18px;
+    }
+    
+    header{
+        padding: 20px;
+    }
+
+    header a img{
+        width: 280px;
+    }
+
+    header nav .hamburger{
+        display: none;
+    }
+
+    header nav .navigation{
+        display: block;
+        position: inherit;
+        width: auto;
+        height: auto;
+        background: none;
+        padding: 0px;
+        display: flex;
+        width: 650px;
+        font-size: 16px;
+        transition: all 1s;
+    }
+
+    .typewrite{
+        padding: 150px 20px 20px;
+        font-size: 26px;
+    }
+
+    #video-carousel .carousel-cell{
+        height: 550px;
+    }
+
+    .animal_btns_quicklinks{
+        padding: 20px 80px;
+    }
+
+    .animal_btns_quicklinks .animal_btn{
+        height: 250px;
+    }
+
+    .animal_btns_quicklinks .animal_btn .animal_btn_content h2{
+        font-size: 50px;
+        text-shadow: 0px 0px 10px var(--black);
+    }
+
+    #products-carousel .carousel-cell{
+        height: 450px;
+    }
+
+    #products-carousel .carousel-cell .content{
+        width: 650px;
+        left: 80px;
+    }
+
+    #products-carousel .carousel-cell .content img{
+        width: 180px;
+    }
+
+    .faq_dropdown_container .faq_dropdown_content .faq_dropdown_q{
+        padding: 20px 80px;
+    }
+
+    .faq_dropdown_container .faq_dropdown_content .faq_dropdown_q h3:after{
+        top: 35%;
+    }
+
+    .home_videos{
+        padding: 30px 80px;
+    }
+
+    .home_videos .home_video{
+        width: calc(100% / 5 - 20px);
+    }
+
+    .about-page .about-cols{
+        align-items: center;
+    }
+
+    .about-page .about-cols .image{
+        height: 550px;
+    }
+
+    .about-page .about-cols .image img{
+        height: 550px;
+        width: auto;
+    }
+
+    .about-page .about-dehydration .four-col{
+        width: 1000px;
+        margin: 30px auto 10px;
+    }
+
+    .about-page .about-dehydration .four-col .col{
+        height: 300px;
+        transform-origin: all 1s;
+    }
+
+    .about-page .about-dehydration .four-col .col:hover{
+        background: var(--orange);
+    }
+
+    .about-page .about-pets,
+    .about-page .about-dehydration{
+        padding: 30px 50px;
+    }
+
+    .product-page .product-header{
+        height: 650px;
+    }
+
+    .product-page .product-header .video img{
+        top: 160px;
+        width: 300px;
+    }
+
+    .product-page .two-col .image{
+        height: 320px;
+    }
+
+    .product-page .two-col .col{
+        position: relative;
+    }
+
+    .product-page .two-col .col .copy{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 50px;
+    }
+
+    .product-page .product-two-col{
+        width: 1100px;
+        margin: auto;
+    }
+
+    .product-page .product-two-col .col img{
+        height: 450px;
+        margin: auto;
+        display: block;
+    }
+
+    .product-page .benefits{
+        padding: 30px 100px;
+    }
+
+    .product-page .home_videos_heading{
+        padding: 20px 40px;
+    }
+
+    .product-page .other-products .other-products-cols .other-products-col img{
+        height: 350px;
+    }
+
+    .contact .contact-cols{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .contact .contact-cols .contact-col,
+    .contact .contact-cols .contact-col.with-bg,
+    .contact .contact-cols .contact-col.img{
+        width: 50%;
+        height: calc(100vh - 100px);
+    }
+    
+}
+
+@media only screen and (min-width: 1920px){
+
+    #video-carousel .carousel-cell{
+        height: 650px;
+    }
+
+    .animal_btns_quicklinks .animal_btn{
+        height: 350px;
+    }
+
+    #products-carousel .carousel-cell{
+        height: 550px;
+    }
+
+    .product-page .two-col .image{
+        height: 460px;
+    }
+
+}

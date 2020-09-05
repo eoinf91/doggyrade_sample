@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>DoggyRade</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="title" content="DoggyRade">
+        <meta name="description" content="Delicious and refreshing low-calorie rehydration drinks for pets">
+
+        <!-- Styles -->
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/flickity.min.css">
+        <link rel="stylesheet" href="styles/MyFontsWebfontsKit.css">
+
+        <!-- Scripts -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/flickity.pkgd.min.js"></script>
+
+    </head>
+
+    <body onload="typeWriter()">
+        
+        <!-- Header -->
+        <header>
+            <a href="/">
+                <img src="assets/images/logos/DoggyRade_logo-image.png" alt="DoggyRade">
+            </a>
+            <nav>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div id="navigation" class="navigation">
+                    <a href="/">Home</a>
+                    <a href="/about">About</a>
+                    <a href="/doggyrade">DoggyRade</a>
+                    <a href="/kittyrade">KittyRade</a>
+                    <a href="#">Other Products</a>
+                    <a href="/contact">Contact</a>
+                    <a href="#">Order</a>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Typewriter Text -->
+        <div id="typewriter" class="typewrite">
+            <!-- <h1>HAPPY | HEALTHY | HYDRATED</h1> -->
+        </div>
+
+        <!-- VIDEO CAROUSEL -->
+        <div id="video-carousel" class="carousel" data-flickity='{ "fullscreen": true, "pageDots": false}'>
+          <div class="carousel-cell">
+            <div class="video">
+              <img src="assets/images/logos/DoggyRade_logo-image.png" alt="DoggyRade">
+              <video autoplay loop muted>
+                <source src="assets/videos/raikko_video_optimized_2.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="carousel-cell">
+            <div class="video">
+              <img src="assets/images/logos/KittyRade_logo.png" alt="DoggyRade">
+              <video autoplay loop muted>
+                <source src="assets/videos/willow_video_optimized.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+
+        <!-- Subheading -->
+        <div class="subhead">
+            <h2>Delicious and refreshing low-calorie rehydration drinks for pets</h2>
+        </div>
+
+        <!-- Animal Buttons Quick Links -->
+        <div class="animal_btns_quicklinks">
+            <div class="animal_btn dogs">
+                <div class="animal_btn_content">
+                    <h2>Dogs</h2>
+                    <a href="/doggyrade" class="cta white">Click here</a>
+                </div>
+            </div>
+            <div class="animal_btn cats">
+                <div class="animal_btn_content">
+                    <h2>Cats</h2>
+                    <a href="/kittyrade" class="cta white-pink">Click here</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Products Carousel -->
+        <div id="products-carousel" class="carousel" data-flickity='{ "fullscreen": true, "pageDots": false, "autoPlay": 6000 }'>
+            <div class="carousel-cell doggyrade">
+              <div class="content">
+                <img src="assets/images/doggyrade_pack.png" alt="Doggyrade" />
+                <div class="copy">
+                    <h2>Help your dogs recover</h2>
+                    <br/>
+                    <h2>quicker after exercise</h2>
+                    <br/>
+                    <a href="/doggyrade" class="cta white">Learn More</a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-cell kittyrade">
+              <div class="content">
+                <img src="assets/images/kittyrade_pack.png" alt="Kittyrade" />
+                <div class="copy">
+                    <h2>Encourage fluid</h2>
+                    <br/>
+                    <h2>intake with added</h2>
+                    <br/>
+                    <h2>health benefits</h2>
+                    <br/>
+                    <a href="/kittyrade" class="cta white-pink">Learn More</a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-cell yummyrade">
+              <div class="content">
+                <img src="assets/images/yummyrade_pack.png" alt="Yummyrade" />
+                <div class="copy">
+                    <h2>Improve the</h2>
+                    <br/>
+                    <h2>flavour profile of</h2>
+                    <br/>
+                    <h2>their food with</h2>
+                    <br/>
+                    <h2>this tasty topper</h2>
+                    <br/>
+                    <a href="/yummyrade" class="cta blue-white">Learn More</a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-cell doggyradepro">
+              <div class="content">
+                <img src="assets/images/doggyradepro_pack.png" alt="Doggyrade Pro" />
+                <div class="copy">
+                    <h2>Help your dog</h2>
+                    <br/>
+                    <h2>recover from intestinal</h2>
+                    <br/>
+                    <h2>issues, support rehydration</h2>
+                    <br/>
+                    <h2>and intestinal function</h2>
+                    <br/>
+                    <a href="/doggyradepro" class="cta blue-white">Learn More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <!-- FAQ Dropdowns -->
+        <div class="faq_dropdown_container">
+            
+            <!-- FAQ CONTENT -->
+            <div class="faq_dropdown_content">
+                <div class="faq_dropdown_q">
+                    <h3>Dehydration in Pets</h3>
+                </div>
+                <div class="faq_dropdown_a">
+                    <div class="container">
+                        <div class="col">
+                            <img src="assets/images/cat_dog_faqs_image.jpg" alt="" />
+                        </div>
+                        <div class="col content">
+                            <p>Pets tend to lose fluids and electrolytes through exertion. If they lose too much fluid it can lead to dehydration. Help keep your pet hydrated and avoid future health issues.</p>
+                            <a href="/about" class="cta blue-white">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ CONTENT -->
+            <div class="faq_dropdown_content">
+                <div class="faq_dropdown_q">
+                    <h3>Dehydration in Pets</h3>
+                </div>
+                <div class="faq_dropdown_a">
+                    <div class="container">
+                        <div class="col content">
+                            <p>An isotonic drink improves the intake of water, minerals and nutrients, to facilitate the replacement of what the body uses during exertion. It contains similar concentrations of salt and sugar as those found in the body. It quickly replaces fluids lost through sweating and supplies a boost of carbohydrate. See why pets love it</p>
+                        </div>
+                        <div class="col">
+                            <img src="assets/images/why_pets_love_it.jpg" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- HOME VIDEOS -->
+        <div class="home_videos">
+
+            <!-- Home Video -->
+            <div class="home_video">
+                <img src="assets/images/video_list_btn_01.jpg" alt="" />
+                <p>
+                    Luna, greyhound X
+                    <br />2 Yrs - Ireland
+                </p>
+            </div>
+
+            <!-- Home Video -->
+            <div class="home_video">
+                <img src="assets/images/video_list_btn_02.jpg" alt="" />
+                <p>
+                    XX, French Bulldog
+                    <br />Yrs ?  - Country
+                </p>
+            </div>
+            
+            <!-- Home Video -->
+            <div class="home_video">
+                <img src="assets/images/video_list_btn_03.jpg" alt="" />
+                <p>
+                    XX, Retriever
+                    <br />Yrs ?  - Country
+                </p>
+            </div>
+
+            <!-- Home Video -->
+            <div class="home_video">
+                <img src="assets/images/video_list_btn_04.jpg" alt="" />
+                <p>
+                    Max, German Shepard - Ireland
+                </p>
+            </div>
+
+            <!-- Home Video -->
+            <div class="home_video">
+                <img src="assets/images/video_list_btn_05.jpg" alt="" />
+                <p>
+                    Polly. Cockapoo - Ireland
+                </p>
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            
+            <!-- Social Media Icons -->
+            <div class="social_icons">
+                <a href="#" target="_blank" rel="noreferrer noopener">
+                    <img src="assets/images/social-icons/fb.svg" alt="Facebook">
+                </a>
+                <a href="#" target="_blank" rel="noreferrer noopener">
+                    <img src="assets/images/social-icons/insta.svg" alt="Instagram">
+                </a>
+                <a href="#" target="_blank" rel="noreferrer noopener">
+                    <img src="assets/images/social-icons/linkedin.svg" alt="LinkedIn">
+                </a>
+                <a href="#" target="_blank" rel="noreferrer noopener">
+                    <img src="assets/images/social-icons/twitter.svg" alt="Twitter">
+                </a>
+                <a href="#" target="_blank" rel="noreferrer noopener">
+                    <img src="assets/images/social-icons/youtube.svg" alt="YouTube">
+                </a>
+            </div>
+
+            <!-- Legals -->
+            <div class="legals">
+                <p>Copyright © Tonisity International Limited (2016) All Rights Reserved</p>
+                <p>DoggyRade™, KittyRade™, YummyRade™ and DoggyRade Pro™ are Trademarks of Tonisity International Limited</p>
+            </div>
+
+        </footer>
+
+
+        <!-- SCRIPTS -->
+        <script>
+
+            // Hamburger Toggle Class
+            $(".hamburger").on("click", function() {
+                $(this).toggleClass("open");
+                console.log("CLICK");
+                $(".navigation").slideToggle();
+            });
+
+            // Typewriting effect
+            var i = 0;
+            var txt = 'HAPPY | HEALTHY | HYDRATED'; /* The text */
+            var speed = 300; /* The speed/duration of the effect in milliseconds */
+
+            function typeWriter() {
+                if (i < txt.length) {
+                    document.getElementById("typewriter").innerHTML += txt.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, speed);
+                }
+            }
+
+            // Carousel
+            var elem = document.querySelector('.main-carousel');
+            var flkty = new Flickity( elem, {
+                // options
+                cellAlign: 'left',
+                contain: true
+            });
+
+            // element argument can be a selector string
+            //   for an individual element
+            var flkty = new Flickity( '.main-carousel', {
+                // options
+            });
+
+            // Open FAQs
+            $(".faq_dropdown_q").on("click", function(){
+                $(this).toggleClass("open");
+                $(this).next(".faq_dropdown_a").slideToggle();
+            })
+
+            window.onscroll = function(){
+                scrollFunction();
+            };
+
+            function scrollFunction(){
+                if(window.innerWidth < 1366){
+                    console.log("TOO SMALL")
+                } else {
+                    if(document.body.scrollTop > 120 || document.documentElement.scrollTop > 120) {
+                        document.getElementById("navigation").style.width = "850px";
+                    } else {
+                        document.getElementById("navigation").style.width = "650px";
+                    }
+                }
+            }
+
+        </script>
+
+    </body>
+</html>
