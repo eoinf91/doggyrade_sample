@@ -327,8 +327,17 @@ header nav .navigation .with-subnav .subnav{
 
 .animal_btns_quicklinks .animal_btn .animal_btn_content h2{
     color: var(--white);
-    font-size: 30px;
-    text-shadow: 0px 0px 5px var(--black);
+    font-size: 50px;
+    font-family: museo-slab, serif;
+    font-weight: 800;
+    font-style: normal;
+    -webkit-text-stroke: 2px black;
+    text-shadow:
+        0px 0px 0 #000,
+        0px 0px 0 #000,  
+        0px 0px 0 #000,
+        0px 0px 0 #000,
+        0px 0px 0 #000;
 }
 
 #products-carousel .carousel-cell{
@@ -341,7 +350,7 @@ header nav .navigation .with-subnav .subnav{
 #products-carousel .carousel-cell.doggyrade{
     background: 
         linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-        url("../assets/images/carousel_doggyrade_bg.jpg");
+        url("../assets/images/carousel_doggyrade_image.jpg");
     background-size: cover;
     background-position: 60% center;
 }
@@ -349,7 +358,7 @@ header nav .navigation .with-subnav .subnav{
 #products-carousel .carousel-cell.kittyrade{
     background: 
         linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-        url("../assets/images/carousel_kittyrade_bg.jpg");
+        url("../assets/images/carousel_kittyrade_image.jpg");
     background-size: cover;
     background-position: 10% center;
 }
@@ -357,7 +366,7 @@ header nav .navigation .with-subnav .subnav{
 #products-carousel .carousel-cell.yummyrade{
     background: 
         linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-        url("../assets/images/carousel_yummyrade_bg.jpg");
+        url("../assets/images/carousel_yummyrade_image.jpg");
     background-size: cover;
     background-position: 75% center;
 }
@@ -365,7 +374,7 @@ header nav .navigation .with-subnav .subnav{
 #products-carousel .carousel-cell.doggyradepro{
     background: 
         linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-        url("../assets/images/carousel_doggyradepro_bg.jpg");
+        url("../assets/images/carousel_doggyradepro_image.jpg");
     background-size: cover;
     background-position: 10% center;
 }
@@ -921,28 +930,28 @@ footer .legals p{
 
     #products-carousel .carousel-cell.doggyrade{
         background: 
-            url("../assets/images/carousel_doggyrade_bg.jpg");
+            url("../assets/images/carousel_doggyrade_image.jpg");
         background-size: cover;
         background-position: center;
     }
     
     #products-carousel .carousel-cell.kittyrade{
         background: 
-            url("../assets/images/carousel_kittyrade_bg.jpg");
+            url("../assets/images/carousel_kittyrade_image.jpg");
         background-size: cover;
         background-position: center;
     }
     
     #products-carousel .carousel-cell.yummyrade{
         background: 
-            url("../assets/images/carousel_yummyrade_bg.jpg");
+            url("../assets/images/carousel_yummyrade_image.jpg");
         background-size: cover;
         background-position: center;
     }
     
     #products-carousel .carousel-cell.doggyradepro{
         background: 
-            url("../assets/images/carousel_doggyradepro_bg.jpg");
+            url("../assets/images/carousel_doggyradepro_image.jpg");
         background-size: cover;
         background-position: center;
     }
@@ -1207,8 +1216,9 @@ footer .legals p{
     }
 
     .animal_btns_quicklinks .animal_btn .animal_btn_content h2{
-        font-size: 50px;
-        text-shadow: 0px 0px 10px var(--black);
+        font-size: 80px;
+        -webkit-text-stroke: 3px black;
+        letter-spacing: 1px;
     }
 
     #products-carousel .carousel-cell{
