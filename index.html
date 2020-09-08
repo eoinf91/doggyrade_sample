@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-177466363-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-177466363-1');
+        </script> -->
+
         <title>DoggyRade</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="title" content="DoggyRade">
@@ -200,9 +211,8 @@
 
         <!-- HOME VIDEOS -->
         <div class="home_videos">
-
             <!-- Home Video -->
-            <div class="home_video">
+            <div class="home_video" id="luna_vidBtn">
                 <img src="assets/images/video_list_btn_01.jpg" alt="" />
                 <p>
                     Luna, Greyhound Cross,
@@ -211,16 +221,16 @@
             </div>
 
             <!-- Home Video -->
-            <div class="home_video">
-                <img src="assets/images/video_list_btn_02.jpg" alt="" />
+            <div class="home_video" id="zack_vidBtn">
+                <img src="assets/images/zack-vid-btn.jpg" alt="" />
                 <p>
-                    Zack, French Bulldog,
+                    Zack, Cockapoo,
                     <br />3 years, UK
                 </p>
             </div>
             
             <!-- Home Video -->
-            <div class="home_video">
+            <div class="home_video" id="leo_vidBtn">
                 <img src="assets/images/video_list_btn_03.jpg" alt="" />
                 <p>
                     Leo, Golden Retriever,
@@ -229,7 +239,7 @@
             </div>
 
             <!-- Home Video -->
-            <div class="home_video">
+            <div class="home_video" id="max_vidBtn">
                 <img src="assets/images/video_list_btn_04.jpg" alt="" />
                 <p>
                     Max, German Shepherd, 
@@ -238,7 +248,7 @@
             </div>
 
             <!-- Home Video -->
-            <div class="home_video">
+            <div class="home_video" id="polly_vidBtn">
                 <img src="assets/images/video_list_btn_05.jpg" alt="" />
                 <p>
                     Polly Anna, Spanish Water Dog, 
@@ -248,25 +258,61 @@
 
         </div>
 
+        <!-- HOME VIDEO POP UPS -->
+        <div class="home-video-pop-up" id="zackVideo">
+            <video loop muted controls controllist="nodownload">
+                <source src="assets/videos/zack.mp4" type="video/mp4">
+            </video>
+            <button id="close-zack-video" class="video-pop-up-button">Close Video</button>
+        </div>
+
+        <div class="home-video-pop-up" id="lunaVideo">
+            <video loop muted controls controllist="nodownload">
+                <source src="assets/videos/luna.mp4" type="video/mp4">
+            </video>
+            <button id="close-luna-video" class="video-pop-up-button">Close Video</button>
+        </div>
+
+        <div class="home-video-pop-up" id="leoVideo">
+            <video loop muted controls controllist="nodownload">
+                <source src="assets/videos/leo.mp4" type="video/mp4">
+            </video>
+            <button id="close-leo-video" class="video-pop-up-button">Close Video</button>
+        </div>
+
+        <div class="home-video-pop-up" id="maxVideo">
+            <video loop muted controls controllist="nodownload">
+                <source src="assets/videos/max.mp4" type="video/mp4">
+            </video>
+            <button id="close-max-video" class="video-pop-up-button">Close Video</button>
+        </div>
+
+        <div class="home-video-pop-up" id="pollyVideo">
+            <video loop muted controls controllist="nodownload">
+                <source src="assets/videos/polly.mp4" type="video/mp4">
+            </video>
+            <button id="close-polly-video" class="video-pop-up-button">Close Video</button>
+        </div>
+
         <!-- Footer -->
         <footer>
             
             <!-- Social Media Icons -->
             <div class="social_icons">
                 <a href="https://www.facebook.com/DoggyRade-100398768452149" target="_blank" rel="noreferrer noopener">
-                    <img src="../assets/images/social-icons/fb.svg" alt="Facebook">
+                    <img src="assets/images/social-icons/fb.svg" alt="Facebook">
                 </a>
                 <a href="https://www.instagram.com/doggyrade/" target="_blank" rel="noreferrer noopener">
-                    <img src="../assets/images/social-icons/insta.svg" alt="Instagram">
+                    <img src="assets/images/social-icons/insta.svg" alt="Instagram">
                 </a>
                 <a href="#" target="_blank" rel="noreferrer noopener">
-                    <img src="../assets/images/social-icons/linkedin.svg" alt="LinkedIn">
+                    <img src="assets/images/social-icons/linkedin.svg" alt="LinkedIn">
                 </a>
                 <a href="https://twitter.com/DoggyRade" target="_blank" rel="noreferrer noopener">
-                    <img src="../assets/images/social-icons/twitter.svg" alt="Twitter">
+                    <img src="assets/images/social-icons/twitter.svg" alt="Twitter">
                 </a>
                 <a href="#" target="_blank" rel="noreferrer noopener">
-                    <img src="../assets/images/social-icons/youtube.svg" alt="YouTube">
+                    <img src="assets/images/social-icons/youtube.svg" alt="YouTube">
                 </a>
             </div>
 
@@ -343,6 +389,52 @@
                     }
                 }
             }
+
+            // Video Popup scripts
+        $("#luna_vidBtn").on("click", function(){
+            $("#lunaVideo").fadeToggle();
+        });
+
+        $("#close-luna-video").on("click", function(){
+            $("#lunaVideo").fadeToggle();
+            $(this).parent().children("video").trigger('pause');
+        });
+
+        $("#zack_vidBtn").on("click", function(){
+            $("#zackVideo").fadeToggle();
+        });
+
+        $("#close-zack-video").on("click", function(){
+            $("#zackVideo").fadeToggle();
+            $(this).parent().children("video").trigger('pause');
+        });
+
+        $("#leo_vidBtn").on("click", function(){
+            $("#leoVideo").fadeToggle();
+        });
+
+        $("#close-leo-video").on("click", function(){
+            $("#leoVideo").fadeToggle();
+            $(this).parent().children("video").trigger('pause');
+        });
+
+        $("#max_vidBtn").on("click", function(){
+            $("#maxVideo").fadeToggle();
+        });
+
+        $("#close-max-video").on("click", function(){
+            $("#maxVideo").fadeToggle();
+            $(this).parent().children("video").trigger('pause');
+        });
+
+        $("#polly_vidBtn").on("click", function(){
+            $("#pollyVideo").fadeToggle();
+        });
+
+        $("#close-polly-video").on("click", function(){
+            $("#pollyVideo").fadeToggle();
+            $(this).parent().children("video").trigger('pause');
+        });
 
         </script>
 
