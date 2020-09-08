@@ -423,8 +423,8 @@ header nav .navigation .with-subnav .subnav{
 }
 
 .faq_dropdown_container .faq_dropdown_content .faq_dropdown_q{
-    background: url('../assets/images/products_bg.jpg');
-    background-size: cover;
+    background: url('../assets/images/about_dark_bg.jpg');
+    background-size: auto;
     background-position: center;
     padding: 10px 20px;
     cursor: pointer;
@@ -508,7 +508,7 @@ footer .legals p{
 
 .about-page .with-bg{
     background: url('../assets/images/about_dark_bg.jpg');
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     padding: 20px;
 }
@@ -649,7 +649,7 @@ footer .legals p{
 
 .product-page .two-col .content{
     background: url('../assets/images/about_dark_bg.jpg');
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     padding: 20px;
 }
@@ -662,9 +662,9 @@ footer .legals p{
 .product-page .product-logo{
     border-top: 8px solid var(--lightBlue);
     padding: 20px;
-    background: url('../assets/images/products_bg.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
+    background: url('../assets/images/about_dark_bg.jpg');
+    background-size: auto;
+    background-repeat: repeat;
 }
 
 .product-page.kittyrade .product-logo{
@@ -755,7 +755,7 @@ footer .legals p{
 .product-page .other-products{
     padding: 20px;
     background: url('../assets/images/about_dark_bg.jpg');
-    background-size: cover;
+    background-size: contain;
 }
 
 .product-page .other-products h2{
@@ -812,7 +812,7 @@ footer .legals p{
 
 .contact .contact-cols .contact-col.with-bg{
     background: url('../assets/images/about_dark_bg.jpg');
-    background-size: cover;
+    background-size: contain;
     padding: 140px 20px 20px;
 }
 
@@ -1166,7 +1166,7 @@ footer .legals p{
     header nav .navigation .with-subnav .subnav{
         position: absolute;
         background: url('../assets/images/about_dark_bg.jpg');
-        background-size: cover;
+        background-size: contain;
         padding: 10px;
         display: none;
         width: 350px;
