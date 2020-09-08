@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Order - DoggyRade</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="title" content="DoggyRade">
+        <meta name="description" content="Delicious and refreshing low-calorie rehydration drinks for pets">
+
+        <!-- Styles -->
+        <link rel="stylesheet" href="../styles/main.css">
+        <link rel="stylesheet" href="../styles/flickity.min.css">
+        <link rel="stylesheet" href="../styles/MyFontsWebfontsKit.css">
+
+        <!-- Scripts -->
+        <script src="../js/jquery.min.js"></script>
+        <script src="../js/flickity.pkgd.min.js"></script>
+        <script src="../js/scrollme.min.js"></script>
+
+    </head>
+
+    <body>
+        
+        <!-- Header -->
+        <header class="btm-border">
+            <a href="/doggyrade_sample/">
+                <img src="../assets/images/logos/DoggyRade_logo-image.png" alt="DoggyRade">
+            </a>
+            <nav>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div id="navigation" class="navigation">
+                    <a href="/doggyrade_sample/">Home</a>
+                    <a href="/doggyrade_sample/about/">About</a>
+                    <a href="/doggyrade_sample/doggyrade/">DoggyRade</a>
+                    <a href="/doggyrade_sample/kittyrade/">KittyRade</a>
+                    <div class="with-subnav">
+                        <a id="other-products">Other Products</a>
+                        <div class="subnav">
+                            <a href="/doggyrade_sample/yummyrade/">YummyRade</a>
+                            <a href="/doggyrade_sample/doggyradepro/">DoggyRade Pro</a>
+                        </div>
+                    </div>
+                    <a href="/doggyrade_sample/contact/">Contact</a>
+                    <a href="/doggyrade_sample/order/">Order</a>
+                </div>
+            </nav>
+        </header>
+
+        <!-- BODY CONTENT -->
+        <div class="contact">
+
+            <div class="contact-cols">
+                <div class="contact-col orders img"></div>
+                <div class="contact-col with-bg">
+                    <h1>Order</h1>
+                    <p>Thanks you for your interest in our products.</p>
+                    <p>Our order function is currently under development.</p>
+                    <p>In the meantime, if you would like to make an enquiry or place an order, please email <a href="info@doggyrade.com">info@doggyrade.com</a></p>
+                </div>
+            </div>
+            
+        </div>
+
+        
+
+    <!-- Footer -->
+    <footer>
+        
+        <!-- Social Media Icons -->
+        <div class="social_icons">
+            <a href="#" target="_blank" rel="noreferrer noopener">
+                <img src="../assets/images/social-icons/fb.svg" alt="Facebook">
+            </a>
+            <a href="#" target="_blank" rel="noreferrer noopener">
+                <img src="../assets/images/social-icons/insta.svg" alt="Instagram">
+            </a>
+            <a href="#" target="_blank" rel="noreferrer noopener">
+                <img src="../assets/images/social-icons/linkedin.svg" alt="LinkedIn">
+            </a>
+            <a href="#" target="_blank" rel="noreferrer noopener">
+                <img src="../assets/images/social-icons/twitter.svg" alt="Twitter">
+            </a>
+            <a href="#" target="_blank" rel="noreferrer noopener">
+                <img src="../assets/images/social-icons/youtube.svg" alt="YouTube">
+            </a>
+        </div>
+
+        <!-- Legals -->
+        <div class="legals">
+            <p>Copyright © Tonisity International Limited (2016) All Rights Reserved</p>
+            <p>DoggyRade™, KittyRade™, YummyRade™ and DoggyRade Pro™ are Trademarks of Tonisity International Limited</p>
+        </div>
+
+    </footer>
+
+
+    <!-- SCRIPTS -->
+    <script>
+
+        // Hamburger Toggle Class
+        $(".hamburger").on("click", function() {
+            $(this).toggleClass("open");
+            console.log("CLICK");
+            $(".navigation").slideToggle();
+        });
+
+        // Navigation - Other Products Toggle Slide
+        $("#other-products").on("click", function() {
+            $(this).parent().children(".subnav").slideToggle();
+            console.log("other click");
+        });
+
+        // Typewriting effect
+        var i = 0;
+        var txt = 'HAPPY | HEALTHY | HYDRATED'; /* The text */
+        var speed = 300; /* The speed/duration of the effect in milliseconds */
+
+        function typeWriter() {
+            if (i < txt.length) {
+                document.getElementById("typewriter").innerHTML += txt.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            }
+        }
+
+        // Carousel
+        var elem = document.querySelector('.main-carousel');
+        var flkty = new Flickity( elem, {
+            // options
+            cellAlign: 'left',
+            contain: true
+        });
+
+        // element argument can be a selector string
+        //   for an individual element
+        var flkty = new Flickity( '.main-carousel', {
+            // options
+        });
+
+        // Open FAQs
+        $(".faq_dropdown_q").on("click", function(){
+            $(this).toggleClass("open");
+            $(this).next(".faq_dropdown_a").slideToggle();
+        })
+
+        window.onscroll = function(){
+            scrollFunction();
+        };
+
+        function scrollFunction(){
+            if(window.innerWidth < 1366){
+                console.log("TOO SMALL")
+            } else {
+                if(document.body.scrollTop > 120 || document.documentElement.scrollTop > 120) {
+                    document.getElementById("navigation").style.width = "850px";
+                } else {
+                    document.getElementById("navigation").style.width = "650px";
+                }
+            }
+        }
+
+    </script>
+
+    </body>
+</html>

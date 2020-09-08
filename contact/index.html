@@ -36,9 +36,15 @@
                     <a href="/doggyrade_sample/about/">About</a>
                     <a href="/doggyrade_sample/doggyrade/">DoggyRade</a>
                     <a href="/doggyrade_sample/kittyrade/">KittyRade</a>
-                    <a href="#">Other Products</a>
+                    <div class="with-subnav">
+                        <a id="other-products">Other Products</a>
+                        <div class="subnav">
+                            <a href="/doggyrade_sample/yummyrade/">YummyRade</a>
+                            <a href="/doggyrade_sample/doggyradepro/">DoggyRade Pro</a>
+                        </div>
+                    </div>
                     <a href="/doggyrade_sample/contact/">Contact</a>
-                    <a href="#">Order</a>
+                    <a href="/doggyrade_sample/order/">Order</a>
                 </div>
             </nav>
         </header>
@@ -170,6 +176,12 @@
             $(this).toggleClass("open");
             console.log("CLICK");
             $(".navigation").slideToggle();
+        });
+
+        // Navigation - Other Products Toggle Slide
+        $("#other-products").on("click", function() {
+            $(this).parent().children(".subnav").slideToggle();
+            console.log("other click");
         });
 
         // Typewriting effect
