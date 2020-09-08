@@ -7,6 +7,7 @@
     --black: #000000;
     --orange: #F8941B;
     --pink: #D227B9;
+    --deepPink: #D56CAB;
     --purple: #7F3483;
     --regBlue: #006CB6;
     --lightBlue: #00AEEF;
@@ -74,6 +75,16 @@ a.cta.blue-white:hover{
     background: var(--orange);
 }
 
+a.cta.reg-blue-white{
+    color: var(--white);
+    background: var(--regBlue);
+}
+
+a.cta.blue-white:hover{
+    color: var(--white);
+    background: var(--orange);
+}
+
 a.cta.pink-white{
     color: var(--white);
     background: var(--pink);
@@ -81,6 +92,16 @@ a.cta.pink-white{
 
 a.cta.pink-white:hover{
     color: var(--pink);
+    background: var(--white);
+}
+
+a.cta.deepPink-white{
+    color: var(--white);
+    background: var(--deepPink);
+}
+
+a.cta.deepPink-white:hover{
+    color: var(--deepPink);
     background: var(--white);
 }
 
@@ -105,6 +126,7 @@ h2{
     line-height: 1.4em;
     font-weight: 500;
     margin: 0px;
+    letter-spacing: 4px;
 }
 
 h3{
@@ -114,15 +136,17 @@ h3{
     line-height: 1.4em;
     font-weight: 500;
     margin: 0px;
+    letter-spacing: 2px;
 }
 
 p, li{
     font-family: "Helvetica Neue", sans-serif;
     color: var(--black);
     font-size: 14px;
-    line-height: 1.4em;
+    line-height: 2em;
     font-weight: 400;
     margin: 0px;
+    letter-spacing: 2px;
 }
 
 header{
@@ -136,6 +160,10 @@ header{
     position: fixed;
     z-index: 10000;
     width: 100vw;
+}
+
+header.btm-border{
+    border-bottom: 3px solid var(--lightBlue);
 }
 
 header a img{
@@ -209,6 +237,17 @@ header nav .navigation a{
 
 header nav .navigation a:hover{
     color: var(--lightBlue);
+}
+
+header nav .navigation .with-subnav{
+    position: relative;
+}
+
+header nav .navigation .with-subnav .subnav{
+    position: relative;
+    background: rgba(255,255,255,0.25);
+    padding: 10px;
+    display: none;
 }
 
 .typewrite{
@@ -388,10 +427,15 @@ header nav .navigation a:hover{
     background-size: cover;
     background-position: center;
     padding: 10px 20px;
+    cursor: pointer;
+}
+
+.faq_dropdown_container .faq_dropdown_content .faq_dropdown_q:first-of-type{
+    border-bottom: 2px solid var(--white);
 }
 
 .faq_dropdown_container .faq_dropdown_content:first-of-type{
-    margin-bottom: 5px;
+    margin-bottom: 0px;
 }
 
 .faq_dropdown_container .faq_dropdown_content .faq_dropdown_q h3{
@@ -643,13 +687,20 @@ footer .legals p{
 
 .product-page .product-two-col .col p{
     margin: 20px auto;
-    line-height: 1.6em;
 }
 
 .product-page .benefits{
     background: var(--grey);
     border-top: 8px solid var(--lightBlue);
     padding: 20px;
+    position: relative;
+}
+
+.product-page .benefits .splash{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    max-width: 60%;
 }
 
 .product-page.kittyrade .benefits{
@@ -672,17 +723,18 @@ footer .legals p{
     padding: 10px 20px;
     border-radius: 20px;
     background: rgba(255,255,255,0.8);
+    max-width: 450px;
 }
 
 .product-page .benefits .two-col .col p{
     margin: 20px 0px;
-    font-weight: 500;
-    font-size: 1.1em;
+    font-weight: 600;
+    font-size: 1.4em;
 }
 
 .product-page .benefits .two-col .col li{
     margin: 10px 20px;
-    font-size: 1.1em;
+    font-size: 1.4em;
     font-weight: 500;
 }
 
@@ -724,23 +776,27 @@ footer .legals p{
 }
 
 .product-page .other-products .other-products-cols .other-products-col.yummyrade{
-    background: url('../assets/images/YR-BACKGROUND-300X-420.jpg');
+    background: url('../assets/images/683x484-Other-Products-YR_v2.jpg');
     background-size: cover;
+    background-position: center;
 }
 
 .product-page .other-products .other-products-cols .other-products-col.doggyradepro{
-    background: url('../assets/images/DRP-BACKGROUND-300X-420.jpg');
+    background: url('../assets/images/683x484-Other-Products-DRP_v2.jpg');
     background-size: cover;
+    background-position: center;
 }
 
 .product-page .other-products .other-products-cols .other-products-col.doggyrade{
-    background: url('../assets/images/DR-BACKGROUND-300X-420.jpg');
+    background: url('../assets/images/683x484-Other-Products-DR_v2.jpg');
     background-size: cover;
+    background-position: center;
 }
 
 .product-page .other-products .other-products-cols .other-products-col.kittyrade{
-    background: url('../assets/images/KR-BACKGROUND-300X-420.jpg');
+    background: url('../assets/images/683x484-Other-Products-KR_v2.jpg');
     background-size: cover;
+    background-position: center;
 }
 
 .product-page .other-products .other-products-cols .other-products-col img{
@@ -914,16 +970,21 @@ footer .legals p{
     
     .faq_dropdown_container .faq_dropdown_content .faq_dropdown_a .container{
         display: flex;
-        padding: 20px;
+        padding: 0px 20px 0px;
         align-items: center;
     }
 
     .faq_dropdown_container .faq_dropdown_content .faq_dropdown_a .col{
         width: calc(100% / 2 - 10px);
+        overflow: hidden;
+    }
+
+    .faq_dropdown_container .faq_dropdown_content .faq_dropdown_a .col img{
+        transform: scale(1.1);
     }
 
     .faq_dropdown_container .faq_dropdown_content .faq_dropdown_a .container .col p{
-        line-height: 2em;
+        line-height: 4em;
         margin-bottom: 15px;
     }
 
@@ -936,7 +997,7 @@ footer .legals p{
     }
 
     .about-page{
-        padding: 120px 0px 20px;
+        padding: 120px 0px 0px;
     }
 
     .about-page .about-cols{
@@ -945,6 +1006,10 @@ footer .legals p{
         justify-content: space-between;
         margin: 0px;
         padding: 0px 20px;
+    }
+
+    .about-page .about-cols.with-bg{
+        padding: 20px 0px;
     }
 
     .about-page .about-cols .image{
@@ -1012,21 +1077,32 @@ footer .legals p{
         width: calc(100% / 2 - 10px);
     }
 
-    .product-page .other-products .other-products-cols{
-        display: flex;
-        justify-content: space-between;
+    .product-page .other-products{
+        padding: 20px;
     }
 
     .product-page .other-products .other-products-cols .other-products-col{
-        width: calc(100% / 2 - 10px);
+        width: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;
         text-align: left;
     }
 
+    .product-page .other-products .other-products-cols .other-products-col.yummyrade .copy p{
+        color: var(--white);
+    }
+
+    .product-page .other-products .other-products-cols .other-products-col.doggyradepro .copy p{
+        color: var(--deepBlue);
+    }
+
     .product-page .other-products .other-products-cols .other-products-col .copy{
-        width: 65%;
+        width: 45%;
+    }
+
+    .product-page .other-products .other-products-cols .other-products-col .copy img{
+        width: 10px;
     }
 
     .product-page .other-products .other-products-cols .other-products-col .copy p{
@@ -1085,6 +1161,32 @@ footer .legals p{
         width: 650px;
         font-size: 16px;
         transition: all 1s;
+    }
+
+    header nav .navigation .with-subnav .subnav{
+        position: absolute;
+        background: url('../assets/images/about_dark_bg.jpg');
+        background-size: cover;
+        padding: 10px;
+        display: none;
+        width: 350px;
+        border-top: 3px solid var(--white);
+        left: 50%;
+        transform: translateX(-50%);
+        top: 100px;
+        z-index: 1;
+    }
+
+    header nav .navigation .with-subnav .subnav:before{
+        position: absolute;
+        content: "";
+        width: 30px;
+        height: 30px;
+        background: linear-gradient(135deg, #ffffff 50%, rgba(255,255,255,0) 50%);
+        top: -15px;
+        left: 50%;
+        transform: translateX(-50%) rotate(45deg);
+        z-index: -100;
     }
 
     .typewrite{
@@ -1147,7 +1249,7 @@ footer .legals p{
     }
 
     .about-page .about-cols .image img{
-        height: 550px;
+        height: 580px;
         width: auto;
     }
 
@@ -1187,20 +1289,13 @@ footer .legals p{
         position: relative;
     }
 
-    .product-page .two-col .col .copy{
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        left: 50px;
-    }
-
     .product-page .product-two-col{
         width: 1100px;
         margin: auto;
     }
 
     .product-page .product-two-col .col img{
-        height: 450px;
+        height: 570px;
         margin: auto;
         display: block;
     }
@@ -1211,6 +1306,15 @@ footer .legals p{
 
     .product-page .home_videos_heading{
         padding: 20px 40px;
+    }
+
+    .product-page .other-products .other-products-cols{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .product-page .other-products .other-products-cols .other-products-col{
+        width: calc(100% / 2 - 10px);
     }
 
     .product-page .other-products .other-products-cols .other-products-col img{

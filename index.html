@@ -35,7 +35,13 @@
                     <a href="/doggyrade_sample/about/">About</a>
                     <a href="/doggyrade_sample/doggyrade/">DoggyRade</a>
                     <a href="/doggyrade_sample/kittyrade/">KittyRade</a>
-                    <a href="#">Other Products</a>
+                    <div class="with-subnav">
+                        <a id="other-products">Other Products</a>
+                        <div class="subnav">
+                            <a href="/doggyrade_sample/yummyrade/">YummyRade</a>
+                            <a href="/doggyrade_sample/doggyradepro/">DoggyRade Pro</a>
+                        </div>
+                    </div>
                     <a href="/doggyrade_sample/contact/">Contact</a>
                     <a href="#">Order</a>
                 </div>
@@ -89,7 +95,7 @@
         </div>
 
         <!-- Products Carousel -->
-        <div id="products-carousel" class="carousel" data-flickity='{ "fullscreen": true, "pageDots": false, "autoPlay": 6000 }'>
+        <div id="products-carousel" class="carousel" data-flickity='{ "fullscreen": true, "pageDots": false, "autoPlay": 6000, "wrapAround": true }'>
             <div class="carousel-cell doggyrade">
               <div class="content">
                 <img src="assets/images/doggyrade_pack.png" alt="Doggyrade" />
@@ -128,7 +134,7 @@
                     <br/>
                     <h2>this tasty topper</h2>
                     <br/>
-                    <a href="/yummyrade" class="cta blue-white">Learn More</a>
+                    <a href="/yummyrade" class="cta reg-blue-white">Learn More</a>
                 </div>
               </div>
             </div>
@@ -165,7 +171,7 @@
                         </div>
                         <div class="col content">
                             <p>Pets tend to lose fluids and electrolytes through exertion. If they lose too much fluid it can lead to dehydration. Help keep your pet hydrated and avoid future health issues.</p>
-                            <a href="/doggyrade_sample/about/" class="cta blue-white">Learn More</a>
+                            <a href="/doggyrade_sample/about/" class="cta reg-blue-white">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -197,8 +203,8 @@
             <div class="home_video">
                 <img src="assets/images/video_list_btn_01.jpg" alt="" />
                 <p>
-                    Luna, greyhound X
-                    <br />2 Yrs - Ireland
+                    Luna, Greyhound Cross,
+                    <br />2 years, Ireland
                 </p>
             </div>
 
@@ -206,8 +212,8 @@
             <div class="home_video">
                 <img src="assets/images/video_list_btn_02.jpg" alt="" />
                 <p>
-                    XX, French Bulldog
-                    <br />Yrs ?  - Country
+                    ??, French Bulldog,
+                    <br />??, ??
                 </p>
             </div>
             
@@ -215,8 +221,8 @@
             <div class="home_video">
                 <img src="assets/images/video_list_btn_03.jpg" alt="" />
                 <p>
-                    XX, Retriever
-                    <br />Yrs ?  - Country
+                    ??, Golden Retriever,
+                    <br />??, ??
                 </p>
             </div>
 
@@ -224,7 +230,8 @@
             <div class="home_video">
                 <img src="assets/images/video_list_btn_04.jpg" alt="" />
                 <p>
-                    Max, German Shepard - Ireland
+                    Max, German Shepherd, 
+                    <br />England
                 </p>
             </div>
 
@@ -232,7 +239,8 @@
             <div class="home_video">
                 <img src="assets/images/video_list_btn_05.jpg" alt="" />
                 <p>
-                    Polly. Cockapoo - Ireland
+                    Polly Anna, Spanish Water Dog, 
+                    <br />18 months, Switzerland
                 </p>
             </div>
 
@@ -279,10 +287,16 @@
                 $(".navigation").slideToggle();
             });
 
+            // Navigation - Other Products Toggle Slide
+            $("#other-products").on("click", function() {
+                $(this).parent().children(".subnav").slideToggle();
+                console.log("other click");
+            });
+
             // Typewriting effect
             var i = 0;
             var txt = 'HAPPY | HEALTHY | HYDRATED'; /* The text */
-            var speed = 300; /* The speed/duration of the effect in milliseconds */
+            var speed = 150; /* The speed/duration of the effect in milliseconds */
 
             function typeWriter() {
                 if (i < txt.length) {
