@@ -23,7 +23,7 @@
         <!-- Header -->
         <header>
             <a href="/doggyrade_sample/">
-                <img src="../assets/images/logos/DoggyRadePro_logo.png" alt="DoggyRade Pro">
+                <img src="../assets/images/logos/DoggyRade_logo-image.png" alt="DoggyRade">
             </a>
             <nav>
                 <div class="hamburger">
@@ -36,7 +36,13 @@
                     <a href="/doggyrade_sample/about/">About</a>
                     <a href="/doggyrade_sample/doggyrade/">DoggyRade</a>
                     <a href="/doggyrade_sample/kittyrade/">KittyRade</a>
-                    <a href="#">Other Products</a>
+                    <div class="with-subnav">
+                        <a id="other-products">Other Products</a>
+                        <div class="subnav">
+                            <a href="/doggyrade_sample/yummyrade/">YummyRade</a>
+                            <a href="/doggyrade_sample/doggyradepro/">DoggyRade Pro</a>
+                        </div>
+                    </div>
                     <a href="/doggyrade_sample/contact/">Contact</a>
                     <a href="#">Order</a>
                 </div>
@@ -51,7 +57,7 @@
                 <div class="video">
                     <img src="../assets/images/logos/DoggyRadePro_logo.png" alt="DoggyRade Pro">
                     <video autoplay loop muted>
-                            <source src="../assets/videos/willow_video_optimized.mp4" type="video/mp4">
+                            <source src="../assets/videos/raikko_video_optimized_2.mp4" type="video/mp4">
                     </video>
                 </div>
             </div>
@@ -82,7 +88,6 @@
             <!-- Product Two Col -->
             <div class="product-two-col">
                 <div class="col">
-                    <p>Vomiting and/or diarrhea is the most common cause of acute illness in dogs. This can lead to a serious loss of fluids in dogs. Help your dog recover from acute intestinal issues with a low-calorie treat they’ll love.</p>
                     <p>DoggyRade Pro helps dogs go from anorexia to appetite. It is an isotonic rehydration drink for dogs, formulated for use in veterinary patients. It helps dogs recover from intestinal disorders such as acute diarrhea and supports rehydration.</p>
                     <p>Vomiting and/or diarrhea is the most common cause of acute illness in dogs. DoggyRade Pro:
                         <ul>
@@ -95,7 +100,7 @@
                     <p>The aromatic chicken smell entices dogs to drink. DoggyRade Pro contains amino acids, prebiotics and balanced electrolytes, to facilitate the replacement of those lost due to illness. It helps prevent dehydration and caters for all dogs recovering from illness.</p>
                 </div>
                 <div class="col">
-                    <img src="../assets/images/doggyradepro_pack.png" alt="DoggyRade Pro Pack">
+                    <img src="../assets/images/doggyradepro_packs_large.png" alt="DoggyRade Pro Pack">
                 </div>
             </div>
 
@@ -116,6 +121,7 @@
                         </div>
                     </div>
                 </div>
+                <img src="../assets/images/splash.png" alt="" class="splash">
             </div>
             
         </div>
@@ -161,6 +167,12 @@
             $(this).toggleClass("open");
             console.log("CLICK");
             $(".navigation").slideToggle();
+        });
+
+        // Navigation - Other Products Toggle Slide
+        $("#other-products").on("click", function() {
+            $(this).parent().children(".subnav").slideToggle();
+            console.log("other click");
         });
 
         // Typewriting effect

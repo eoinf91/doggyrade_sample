@@ -23,7 +23,7 @@
         <!-- Header -->
         <header>
             <a href="/doggyrade_sample/">
-                <img src="../assets/images/logos/YummyRade_logo.png" alt="YummyRade">
+                <img src="../assets/images/logos/DoggyRade_logo-image.png" alt="DoggyRade">
             </a>
             <nav>
                 <div class="hamburger">
@@ -36,7 +36,13 @@
                     <a href="/doggyrade_sample/about/">About</a>
                     <a href="/doggyrade_sample/doggyrade/">DoggyRade</a>
                     <a href="/doggyrade_sample/kittyrade/">KittyRade</a>
-                    <a href="#">Other Products</a>
+                    <div class="with-subnav">
+                        <a id="other-products">Other Products</a>
+                        <div class="subnav">
+                            <a href="/doggyrade_sample/yummyrade/">YummyRade</a>
+                            <a href="/doggyrade_sample/doggyradepro/">DoggyRade Pro</a>
+                        </div>
+                    </div>
                     <a href="/doggyrade_sample/contact/">Contact</a>
                     <a href="#">Order</a>
                 </div>
@@ -65,7 +71,7 @@
             <!-- Two Col -->
             <div class="two-col">
                 <div class="image col">
-                    <img src="../assets/images/product_yummyrade_cat.png" alt="" class="scrollme animateme" class="animateme" data-when="span" data-from="-1" data-to="1" data-easing="easeinout" data-translatey="50">
+                    <img src="../assets/images/product_yummyrade_cat.png" alt="" class="scrollme animateme" class="animateme" data-when="span" data-from="-1" data-to="1" data-easing="easeinout" data-translatey="60">
                 </div>
                 <div class="content col">
                     <div class="copy">
@@ -90,7 +96,7 @@
                     <p>YummyRade can enhance any food and is extremely low in calories and fat. You can use it to make your dog or cat’s food tastier, without worrying about weight gain or creating digestive issues. Make every mealtime your pet’s favourite.</p>
                 </div>
                 <div class="col">
-                    <img src="../assets/images/yummyrade_pack.png" alt="KittyRade Pack">
+                    <img src="../assets/images/yummyrade_packs_large.png" alt="KittyRade Pack">
                 </div>
             </div>
 
@@ -114,6 +120,7 @@
                         </div>
                     </div>
                 </div>
+                <img src="../assets/images/splash.png" alt="" class="splash">
             </div>
 
             <!-- Other Products -->
@@ -180,6 +187,12 @@
             $(this).toggleClass("open");
             console.log("CLICK");
             $(".navigation").slideToggle();
+        });
+
+        // Navigation - Other Products Toggle Slide
+        $("#other-products").on("click", function() {
+            $(this).parent().children(".subnav").slideToggle();
+            console.log("other click");
         });
 
         // Typewriting effect

@@ -429,6 +429,8 @@ header nav .navigation .with-subnav .subnav{
 
 .home_videos .home_video img{
     margin-bottom: 10px;
+    width: 100%;
+    cursor: pointer;
 }
 
 .faq_dropdown_container .faq_dropdown_content .faq_dropdown_q{
@@ -532,7 +534,7 @@ footer .legals p{
     width: 100%;
     display: block;
     margin: 0px auto;
-    margin-top: 80px;
+    margin-top: 0px;
 }
 
 .about-page .about-cols .about-col h2{
@@ -884,6 +886,54 @@ footer .legals p{
     fill: var(--lightBlue);
 }
 
+.home-video-pop-up{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.75);
+    z-index: 100000;
+    display: none;
+}
+
+.home-video-pop-up video{
+    max-height: 60vh;
+    max-width: 70vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+}
+
+.home-video-pop-up button{
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;
+    padding: 20px 50px;
+    border-radius: 0px;
+    border: none;
+    background: var(--white);
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: var(--deepBlue);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    transition: all 1s;
+    cursor: pointer;
+}
+
+.home-video-pop-up button:hover{
+    background: var(--lightBlue);
+    color: var(--white);
+}
+
 @media only screen and (min-width: 768px){
 
     #video-carousel .carousel-cell {
@@ -1029,8 +1079,12 @@ footer .legals p{
 
     .about-page .about-cols .image img{
         position: relative;
-        bottom: -80px;
         margin: auto;
+        bottom: 80px;
+    }
+
+    .about-page .about-cols .image img.dog{
+        bottom: 0px;
     }
 
     .about-page .about-cols .about-col{
@@ -1099,6 +1153,14 @@ footer .legals p{
     }
 
     .product-page .other-products .other-products-cols .other-products-col.yummyrade .copy p{
+        color: var(--white);
+    }
+
+    .product-page .other-products .other-products-cols .other-products-col.doggyrade .copy p{
+        color: var(--white);
+    }
+
+    .product-page .other-products .other-products-cols .other-products-col.kittyrade .copy p{
         color: var(--white);
     }
 
@@ -1279,7 +1341,7 @@ footer .legals p{
 
     .about-page .about-pets,
     .about-page .about-dehydration{
-        padding: 30px 50px;
+        padding: 60px 50px;
     }
 
     .product-page .product-header{
@@ -1297,11 +1359,22 @@ footer .legals p{
 
     .product-page .two-col .col{
         position: relative;
+        padding: 20px 0px;
+    }
+
+    .product-page .two-col .content{
+        padding: 20px 50px;
     }
 
     .product-page .product-two-col{
         width: 1100px;
         margin: auto;
+    }
+
+    .product-page .product-two-col .col:last-of-type{
+        align-self: flex-start;
+        position: sticky;
+        top: 140px;
     }
 
     .product-page .product-two-col .col img{

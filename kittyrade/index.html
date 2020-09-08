@@ -23,7 +23,7 @@
         <!-- Header -->
         <header>
             <a href="/doggyrade_sample/">
-                <img src="../assets/images/logos/KittyRade_logo.png" alt="KittyRade">
+                <img src="../assets/images/logos/DoggyRade_logo-image.png" alt="DoggyRade">
             </a>
             <nav>
                 <div class="hamburger">
@@ -36,7 +36,13 @@
                     <a href="/doggyrade_sample/about/">About</a>
                     <a href="/doggyrade_sample/doggyrade/">DoggyRade</a>
                     <a href="/doggyrade_sample/kittyrade/">KittyRade</a>
-                    <a href="#">Other Products</a>
+                    <div class="with-subnav">
+                        <a id="other-products">Other Products</a>
+                        <div class="subnav">
+                            <a href="/doggyrade_sample/yummyrade/">YummyRade</a>
+                            <a href="/doggyrade_sample/doggyradepro/">DoggyRade Pro</a>
+                        </div>
+                    </div>
                     <a href="/doggyrade_sample/contact/">Contact</a>
                     <a href="#">Order</a>
                 </div>
@@ -65,7 +71,7 @@
             <!-- Two Col -->
             <div class="two-col">
                 <div class="image col">
-                    <img src="../assets/images/product_kittyrade_dog.png" alt="" class="scrollme animateme" class="animateme" data-when="span" data-from="-1" data-to="1" data-easing="easeinout" data-translatey="50">
+                    <img src="../assets/images/product_kittyrade_dog.png" alt="" class="scrollme animateme" class="animateme" data-when="span" data-from="-1" data-to="1" data-easing="easeinout" data-translatey="60">
                 </div>
                 <div class="content col">
                     <div class="copy">
@@ -120,52 +126,68 @@
 
             <!-- See why dogs love it -->
             <div class="home_videos_heading">
-                <h2>See why dogs love it!</h2>
+                <h2>See why cats love it!</h2>
             </div>
             <div class="home_videos">
                 <!-- Home Video -->
-                <div class="home_video">
-                    <img src="../assets/images/video_list_btn_01.jpg" alt="" />
+                <div class="home_video" id="buttons_vidBtn">
+                    <img src="../assets/images/buttons_nottingham_uk.jpg" alt="" />
                     <p>
-                        Luna, greyhound X
-                        <br />2 Yrs - Ireland
+                        Buttons, Domestic Short Hair,
+                        <br />4 years, Nottingham, England
                     </p>
                 </div>
-    
+
                 <!-- Home Video -->
-                <div class="home_video">
-                    <img src="../assets/images/video_list_btn_02.jpg" alt="" />
+                <div class="home_video" id="willow_vidBtn">
+                    <img src="../assets/images/willow-vid-btn.jpg" alt="" />
                     <p>
-                        XX, French Bulldog
-                        <br />Yrs ?  - Country
+                        Willow, ??,
+                        <br />?? years, ??
                     </p>
                 </div>
                 
                 <!-- Home Video -->
-                <div class="home_video">
-                    <img src="../assets/images/video_list_btn_03.jpg" alt="" />
+                <div class="home_video" id="barncats_vidBtn">
+                    <img src="../assets/images/barn-cats-vid-btn.jpg" alt="" />
                     <p>
-                        XX, Retriever
-                        <br />Yrs ?  - Country
+                        ??, ??,
+                        <br />?? years, ??
                     </p>
                 </div>
-    
+
                 <!-- Home Video -->
                 <div class="home_video">
-                    <img src="../assets/images/video_list_btn_04.jpg" alt="" />
-                    <p>
-                        Max, German Shepard - Ireland
-                    </p>
+                    
                 </div>
-    
+
                 <!-- Home Video -->
                 <div class="home_video">
-                    <img src="../assets/images/video_list_btn_05.jpg" alt="" />
-                    <p>
-                        Polly. Cockapoo - Ireland
-                    </p>
+                    
                 </div>
     
+            </div>
+
+            <!-- HOME VIDEO POP UPS -->
+            <div class="home-video-pop-up" id="buttonsVideo">
+                <video loop muted controls controllist="nodownload">
+                    <source src="../assets/videos/buttons_nottingham_uk.mp4" type="video/mp4">
+                </video>
+                <button id="close-buttons-video" class="video-pop-up-button">Close Video</button>
+            </div>
+
+            <div class="home-video-pop-up" id="willowVideo">
+                <video loop muted controls controllist="nodownload">
+                    <source src="../assets/videos/willow_video_optimized.mp4" type="video/mp4">
+                </video>
+                <button id="close-willow-video" class="video-pop-up-button">Close Video</button>
+            </div>
+
+            <div class="home-video-pop-up" id="barnCatsVideo">
+                <video loop muted controls controllist="nodownload">
+                    <source src="../assets/videos/barn_cats_drinking.mp4" type="video/mp4">
+                </video>
+                <button id="close-barnCats-video" class="video-pop-up-button">Close Video</button>
             </div>
 
             <!-- Other Products -->
@@ -227,6 +249,12 @@
             $(".navigation").slideToggle();
         });
 
+        // Navigation - Other Products Toggle Slide
+        $("#other-products").on("click", function() {
+            $(this).parent().children(".subnav").slideToggle();
+            console.log("other click");
+        });
+
         // Typewriting effect
         var i = 0;
         var txt = 'HAPPY | HEALTHY | HYDRATED'; /* The text */
@@ -275,6 +303,35 @@
                 }
             }
         }
+
+        // Open Video Scripts
+        $("#buttons_vidBtn").on("click", function(){
+            $("#buttonsVideo").fadeToggle();
+        });
+
+        $("#willow_vidBtn").on("click", function(){
+            $("#willowVideo").fadeToggle();
+        });
+
+        $("#barncats_vidBtn").on("click", function(){
+            $("#barnCatsVideo").fadeToggle();
+        });
+
+        // Close Video Script
+        $("#close-buttons-video").on("click", function(){
+            $("#buttonsVideo").fadeToggle();
+            $(this).parent().children("video").trigger('pause');
+        });
+
+        $("#close-willow-video").on("click", function(){
+            $("#willowVideo").fadeToggle();
+            $(this).parent().children("video").trigger('pause');
+        });
+
+        $("#close-barnCats-video").on("click", function(){
+            $("#barnCatsVideo").fadeToggle();
+            $(this).parent().children("video").trigger('pause');
+        });
 
     </script>
 

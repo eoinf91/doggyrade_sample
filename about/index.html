@@ -36,7 +36,13 @@
                     <a href="/doggyrade_sample/about/">About</a>
                     <a href="/doggyrade_sample/doggyrade/">DoggyRade</a>
                     <a href="/doggyrade_sample/kittyrade/">KittyRade</a>
-                    <a href="#">Other Products</a>
+                    <div class="with-subnav">
+                        <a id="other-products">Other Products</a>
+                        <div class="subnav">
+                            <a href="/doggyrade_sample/yummyrade/">YummyRade</a>
+                            <a href="/doggyrade_sample/doggyradepro/">DoggyRade Pro</a>
+                        </div>
+                    </div>
                     <a href="/doggyrade_sample/contact/">Contact</a>
                     <a href="#">Order</a>
                 </div>
@@ -49,8 +55,8 @@
             <!-- About Dogs -->
             <div class="about-cols">
                 <div class="image">
-                    <div class="scrollme animateme" class="animateme" data-when="span" data-from="0" data-to="1" data-easing="easeinout" data-translatey="-50">
-                        <img src="../assets/images/about_dogs.jpg" alt="" />
+                    <div class="scrollme animateme" class="animateme" data-when="span" data-from="-1" data-to="1" data-easing="easeinout" data-translatey="80">
+                        <img class="dog" src="../assets/images/about_dogs.jpg" alt="" />
                     </div>
                 </div>
                 <div class="about-col">
@@ -68,7 +74,7 @@
                     <p>KittyRade is a low-calorie isotonic drink, packed with amino acids, taurine and prebiotics with a great chicken taste profile that appeals to your cat’s senses.</p>
                 </div>
                 <div class="image">
-                    <div class="scrollme animateme" class="animateme" data-when="span" data-from="0" data-to="1" data-easing="easeinout" data-translatey="-50">
+                    <div class="scrollme animateme" class="animateme" data-when="span" data-from="-1" data-to="1" data-easing="easeinout" data-translatey="100">
                         <img src="../assets/images/about_cats.jpg" alt="" />
                     </div>
                 </div>
@@ -92,10 +98,10 @@
                     <a href="/doggyrade_sample/kittyrade/" class="col kittyrade">
                         <img src="../assets/images/kittyrade_pack.png" alt="KittyRade" />
                     </a>
-                    <a href="/yummyrade"  class="col yummyrade">
+                    <a href="/doggyrade_sample/yummyrade"  class="col yummyrade">
                         <img src="../assets/images/yummyrade_pack.png" alt="YummyRade" />
                     </a>
-                    <a href="/doggyradepro"  class="col doggyradepro">
+                    <a href="/doggyrade_sample/doggyradepro"  class="col doggyradepro">
                         <img src="../assets/images/doggyradepro_pack.png" alt="DoggyRade Pro" />
                     </a>
                 </div>
@@ -104,8 +110,8 @@
             <!-- About Rehydration -->
             <div class="about-cols">
                 <div class="image">
-                    <div class="scrollme animateme" class="animateme" data-when="span" data-from="0" data-to="1" data-easing="easeinout" data-translatey="-50">
-                        <img src="../assets/images/about_rehydration.jpg" alt="" />
+                    <div>
+                        <img class="scrollme animateme" class="animateme" data-when="span" data-from="-1" data-to="1" data-easing="easeinout" data-translatey="80" class="dog" src="../assets/images/about_rehydration.jpg" alt="" />
                     </div>
                 </div>
                 <div class="about-col">
@@ -155,6 +161,12 @@
             $(this).toggleClass("open");
             console.log("CLICK");
             $(".navigation").slideToggle();
+        });
+
+        // Navigation - Other Products Toggle Slide
+        $("#other-products").on("click", function() {
+            $(this).parent().children(".subnav").slideToggle();
+            console.log("other click");
         });
 
         // Typewriting effect
